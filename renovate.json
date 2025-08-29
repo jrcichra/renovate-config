@@ -5,6 +5,5 @@
   ],
   "labels": ["dependencies"],
   "dependencyDashboard": true,
-  "schedule": ["before 6am on monday"],
   "automerge": false
 }
