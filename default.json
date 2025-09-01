@@ -1,12 +1,17 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "group:allNonMajor",
-    "group:monorepos",
-    "group:recommended"
-  ],
-  "labels": ["dependencies"],
-  "dependencyDashboard": true,
-  "automerge": false
+"$schema":"https://docs.renovatebot.com/renovate-schema.json",
+"extends":["config:recommended"],
+"labels":["dependencies"],
+"dependencyDashboard":true,
+"automerge":false,
+"prConcurrentLimit":1,
+"prHourlyLimit":0,
+"packageRules":[
+  {
+    "matchPackagePatterns":[".*"],
+    "groupName":"all-dependencies",
+    "groupSlug":"all-dependencies"
+  }
+],
+"schedule":["before 5am on the first day of the month"]
 }
